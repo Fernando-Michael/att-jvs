@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Att 11</title>
+</head>
+<body>
+    <button id="trickyButton" style="position: absolute;">Clique em mim!</button>
+
+    <script>
+        const button = document.getElementById('trickyButton');
+        
+        button.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - button.offsetWidth);
+            const y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
