@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>att 14</title>
+</head>
+<body>
+    <button onclick="changeBackgroundColor()">Mude a cor de fundo da página</button>
+
+    <script>
+        const colors = ["red", "blue", "green", "yellow", "purple"];
+        let currentIndex = 0;
+
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = colors[currentIndex];
+            currentIndex = (currentIndex + 1) % colors.length;
+        }
+    </script>
+</body>
+</html>
