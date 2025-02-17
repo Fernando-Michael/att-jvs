@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Att 11</title>
+    <title>Atividade 11</title>
 </head>
 <body>
-    <button id="trickyButton" style="position: absolute;">Clique em mim!</button>
+    <button id="botao" style="position: absolute;">Clique em mim!</button>
     
-
     <script>
-        const button = document.getElementById('trickyButton');
+        const button = document.getElementById('botao');
         
-        button.addEventListener('mouseover', () => {
+        button.addEventListener('mouseover', function() {
             const x = Math.random() * (window.innerWidth - button.offsetWidth);
             const y = Math.random() * (window.innerHeight - button.offsetHeight);
-            button.style.left = `${x}px`;
-            button.style.top = `${y}px`;
+            button.style.left = x + 'px';
+            button.style.top = y + 'px';
         });
     </script>
 </body>
