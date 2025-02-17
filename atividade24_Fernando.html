@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
+    <title>Validação de Formulário</title>
     <style>
-        .error {
+        .erro {
             border: 2px solid red;
         }
     </style>
 </head>
 <body>
-    <form id="myForm">
-        <label for="myInput">Campo:</label>
-        <input type="text" id="myInput" name="myInput">
-        <button type="button" onclick="validateForm()">Enviar</button>
+    <form id="meuFormulario"></form>
+        <label for="meuInput">Campo:</label>
+        <input type="text" id="meuInput" name="meuInput">
+        <button type="button" onclick="validarFormulario()">Enviar</button>
     </form>
 
     <script>
-        function validateForm() {
-            var input = document.getElementById('myInput');
+        function validarFormulario() {
+            let input = document.getElementById('meuInput');
             if (input.value.trim() === "") {
-                input.classList.add('error');
+                input.classList.add('erro');
             } else {
-                input.classList.remove('error');
+                input.classList.remove('erro');
             }
         }
     </script>
