@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <label for="myInput">Campo:</label>
+        <input type="text" id="myInput" name="myInput">
+        <button type="button" onclick="validateForm()">Enviar</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var input = document.getElementById('myInput');
+            if (input.value.trim() === "") {
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        }
+    </script>
+</body>
+</html>
