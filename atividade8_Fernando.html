@@ -6,12 +6,16 @@
     <title>Att 8</title>
 </head>
 <body>
-    <p id="text">Espero que esteja tendo um otimo dia.</p>
+    <p id="text">Espero que esteja tendo um ótimo dia.</p>
     <button onclick="fonte()">Alterar Tamanho da Fonte</button>
 
     <script>
     function fonte() {
-        document.getElementById("text").style.fontSize = "20px";
+       if (document.getElementById("text").style.fontSize == "20px") {
+           document.getElementById("text").style.fontSize = "10px"; 
+       } else {
+           document.getElementById("text").style.fontSize = "20px"; 
+       }
     }
     </script>
 </body>
