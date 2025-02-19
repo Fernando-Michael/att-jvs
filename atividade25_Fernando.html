@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Att 25</title>
+</head>
+<body>
+    <form id="form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" />
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" />
+        
+        <label for="password">Senha:</label>
+        <input type="password" id="password" />
+    </form>
+    
+    <button onclick="mostrarDados()">Enviar</button>
+
+    <div id="resultado" style="margin-top: 20px;"></div> <!-- Div onde os dados serão exibidos -->
+
+</body>
+<script>
+    function mostrarDados() {
+        // Coleta os valores dos campos
+        var nome = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("password").value;
+
+        // Verifica se os campos estão preenchidos
+        if (nome && email && senha) {
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = 
+                "<h3>Dados inseridos:</h3>" +
+                "<p><strong>Nome:</strong> " + nome + "</p>" +
+                "<p><strong>E-mail:</strong> " + email + "</p>" +
+                "<p><strong>Senha:</strong> " + senha + "</p>";
+        } else {
+            alert("Preencha todos os campos!");
+        }
+    }
+</script>
+</html>
